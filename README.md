@@ -43,14 +43,11 @@ Things you may want to cover:
 - has_many :attendanses
 
 
-## attendanses テーブル
+## plays テーブル
 
 | Column            | Type      | Options                                    |
 | ----------------- | --------- | ------------------------------------------ |
-| datetime          | datetime  | null: false                                |
-| week_id           | integer   | null: false                                |
-| attend            | string    | null: false                                |
-| leave             | string    | null: false                                |
+| attend_id         | integer   | null: false                                |
 | user_id           | reference | null: false null: false, foreign_key: true |
 
 ### Association
