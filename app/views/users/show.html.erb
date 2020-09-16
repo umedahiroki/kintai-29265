@@ -1,0 +1,13 @@
+<div class="contents row">
+  <% @plays.each do |play| %>
+      <p>
+      <% weeks = ["日","月","火","水","木","金","土"]%>
+      <% week = weeks[play.created_at.wday]%>
+      <%=play.created_at.strftime("%m月%d日(#{week})") %>
+      <%=play.attend.name %>
+      <%=play.created_at.strftime('%H:%M:%S') %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
