@@ -12,12 +12,13 @@
   <body>
    <header class="header">
      <div class = "header-message">
-     <h1>rejinji</h1>
+     <h1><%= link_to 'rejinji',  "/", class: "main-title" %></h1>
      </div>
      <div class = 'header-list'>
        <ul class = 'list-one'>
       <% if user_signed_in? %>
       <li><%= link_to current_user.nicknmame, "#", class: "user-nicknmame"%> </li> 
+      <li><%= link_to 'マイページ', "/users/#{current_user.id}", class: "mypage"%> </li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li> 
       </div>
       <% else %>
