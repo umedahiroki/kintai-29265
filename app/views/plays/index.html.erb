@@ -2,8 +2,9 @@
 
 <%#今日の日付と時間を取得する実装%>
 <div class='time-display'>
-<h1 id="realtime">ここに時計が表示されます</h1>
-<script>
+ <div class='datetime'>
+  <div class='timeput' id="realtime">ここに時計が表示されます</div>
+    <script>
     realtime();
     function set(num) {
    // 桁数が1桁だったら先頭に0を加えて2桁に調整する
@@ -18,19 +19,21 @@
         document.getElementById("realtime").innerHTML = now.toLocaleTimeString();
     }
     setInterval('realtime()',1000);
-</script>
-<%= @date %>
-<%= @week %>
-</div>
+    </script>
 
-<div class= 'maininfo'>
+  <div class='dateput'>
+  <%= @date %><%= @week %></div>
+ </div>
+
  <%= form_with model: @play, local: true do |f| %> 
 <%#アクティブハッシュで選択ボタンを実装%>
 <%#form_with,submitボタンで実装%>
-  <div class='workstyle'>
-    <%= f.collection_select(:attend_id, Attend.all, :id, :name, {}, {class:"attend-select"}) %><br />
-    <%= f.submit "送信" ,class:"btn" %>
-  </div>
+    <div class='form-select' >
+    <%= f.collection_select(:attend_id, Attend.all, :id, :name, {}, {class:"attend-select"}) %></div>
+    
+    <div class='send-action'>
+    <%= f.submit "送信" ,class:"btn" %></div>
+</div>  
   <% end %>
 
 </div>

@@ -1,0 +1,52 @@
+.main{
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+}
+
+
+.timeput{
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    padding-top: 80px;
+    font-weight: bold;
+}
+
+.dateput{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+
+.form-select{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.attend-select{
+    width: 45%;
+    height: 30px;
+    padding-left: 78px;
+    background-color: #FFFFFF;
+    border: 2px solid #008000;   
+}
+
+.send-action{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    width: 30%;
+    height: 50px;
+    background-color: #008000;
+    border: 1px solid #008000;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
