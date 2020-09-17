@@ -1,13 +1,25 @@
-<div class="contents row">
-  <% @plays.each do |play| %>
+<div class="main-message">
+<div class="main-topic">
+勤怠情報一覧
+</div>
+</div>
+
+<% @plays.each do |play| %>
+   <div class="contents-row">
       <p>
+      <div class="contens-week">
       <% weeks = ["日","月","火","水","木","金","土"]%>
       <% week = weeks[play.created_at.wday]%>
       <%=play.created_at.strftime("%m月%d日(#{week})") %>
+      </div>
+      <div class="contens-attend">
       <%=play.attend.name %>
+      </div>
+      <div class="contens-time">
       <%=play.created_at.strftime('%H:%M:%S') %>
+      </div>
       </p>
-    </div>
-  <% end %>
-</div>
+      </div>
+<% end %>
+
 
